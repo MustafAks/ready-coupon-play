@@ -1,0 +1,125 @@
+{
+	"id": "bd435e7c-4428-da4c-3174-52e0d68609e3",
+	"name": "Event-Api",
+	"description": "",
+	"order": [
+		"1679fbf8-f35d-c333-be6b-c85fe348923c",
+		"d8af9bde-73dd-82ad-9bb3-78afd2888192",
+		"46696417-8807-8cee-266b-a2446ce312d2",
+		"1697533e-09b0-bddd-25de-58e55ab0004b"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "4636279",
+	"public": false,
+	"requests": [
+		{
+			"id": "1679fbf8-f35d-c333-be6b-c85fe348923c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:9091/events?pageIndex=0&pageSize=10",
+			"queryParams": [
+				{
+					"key": "pageIndex",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1619889847010,
+			"name": "getAllEvents",
+			"description": "",
+			"collectionId": "bd435e7c-4428-da4c-3174-52e0d68609e3",
+			"responses": []
+		},
+		{
+			"id": "1697533e-09b0-bddd-25de-58e55ab0004b",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:9091/events/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1619889949216,
+			"name": "deleteEvent",
+			"description": "",
+			"collectionId": "bd435e7c-4428-da4c-3174-52e0d68609e3",
+			"responses": []
+		},
+		{
+			"id": "46696417-8807-8cee-266b-a2446ce312d2",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:9091/events/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1619889920218,
+			"name": "getEventById",
+			"description": "",
+			"collectionId": "bd435e7c-4428-da4c-3174-52e0d68609e3",
+			"responses": []
+		},
+		{
+			"id": "d8af9bde-73dd-82ad-9bb3-78afd2888192",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9091/events",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1619889902472,
+			"name": "createEvent",
+			"description": "",
+			"collectionId": "bd435e7c-4428-da4c-3174-52e0d68609e3",
+			"responses": [],
+			"rawModeData": "{\n  \"name\": \"Ankaragücü-Beşiktaş\",\n  \"mbs\": 2,\n  \"type\": \"FOOTBALL\",\n  \"eventDate\": \"2021-12-06T21:00:00\"\n}"
+		}
+	]
+}

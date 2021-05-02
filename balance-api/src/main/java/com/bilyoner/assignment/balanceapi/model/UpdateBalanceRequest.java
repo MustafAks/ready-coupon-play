@@ -1,5 +1,6 @@
 package com.bilyoner.assignment.balanceapi.model;
 
+import com.bilyoner.assignment.balanceapi.model.enums.TransactionTypeEnum;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
@@ -20,5 +21,5 @@ public class UpdateBalanceRequest {
     @NotBlank
     private String transactionId;
     @NotBlank
-    private String transactionType;
+    private TransactionTypeEnum transactionType;
 }

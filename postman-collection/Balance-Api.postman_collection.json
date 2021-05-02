@@ -1,0 +1,44 @@
+{
+	"id": "8079c243-9d7f-9cd0-22f3-fb6ca7bee4e9",
+	"name": "Balance-Api",
+	"description": "",
+	"order": [
+		"c8ba2e5c-6546-827e-47e2-c87ec56f77ed"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "4636279",
+	"public": false,
+	"requests": [
+		{
+			"id": "c8ba2e5c-6546-827e-47e2-c87ec56f77ed",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9090/balances",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1619889630483,
+			"name": "updateBalance",
+			"description": "",
+			"collectionId": "8079c243-9d7f-9cd0-22f3-fb6ca7bee4e9",
+			"responses": [],
+			"rawModeData": "{\n  \"userId\": 1,\n  \"amount\": 5,\n  \"transactionId\": \"2345fd-dfg9-sdfg-678h-sdfgklsdsdf\",\n  \"transactionType\": \"DEPOSIT\"\n}"
+		}
+	]
+}

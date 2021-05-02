@@ -21,6 +21,9 @@
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
         <swagger.version>2.9.2</swagger.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <logstash-logback.version>6.4</logstash-logback.version>
+        <modelmapper.version>2.3.8</modelmapper.version>
+        <balance-api-client.version>0.0.1-SNAPSHOT</balance-api-client.version>
     </properties>
 
     <dependencies>
@@ -55,6 +58,16 @@
             <version>${swagger.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>${modelmapper.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>${logstash-logback.version}</version>
+        </dependency>
+        <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${swagger.version}</version>
@@ -64,7 +77,14 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-jackson</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -75,6 +95,11 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.bilyoner.assignment</groupId>
+            <artifactId>balance-api-client</artifactId>
+            <version>${balance-api-client.version}</version>
         </dependency>
     </dependencies>
 
@@ -95,6 +120,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>9</source>
+                    <target>9</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

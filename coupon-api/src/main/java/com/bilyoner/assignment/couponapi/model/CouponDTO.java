@@ -1,16 +1,18 @@
 package com.bilyoner.assignment.couponapi.model;
 
 import com.bilyoner.assignment.couponapi.model.enums.CouponStatusEnum;
-import lombok.Builder;
-import lombok.Getter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Getter
+@Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CouponDTO implements Serializable {
 
     private Long id;
@@ -19,4 +21,8 @@ public class CouponDTO implements Serializable {
     private BigDecimal cost;
     private List<Long> eventIds;
     private LocalDateTime playDate;
+    private LocalDateTime createDate;
+    private LocalDateTime updateDate;
+    @JsonIgnoreProperties("coupon")
+    private List<CouponSelectionDTO> selections;
 }

@@ -1,0 +1,162 @@
+{
+	"id": "94237fe4-2051-425c-ee41-71d7ff55be9a",
+	"name": "Coupon-Api",
+	"description": "",
+	"order": [
+		"4159649d-6847-6dba-34f1-d1973856bbb7",
+		"67da459e-f182-73f2-4c3b-c340f7a43f78",
+		"f52a04c7-e379-5c42-8576-258a8c7f1028",
+		"d1582c5d-ece0-6b49-3654-19c11983453c",
+		"213770bf-5b82-71fc-3f42-f248647cd405"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "4636279",
+	"public": false,
+	"requests": [
+		{
+			"id": "213770bf-5b82-71fc-3f42-f248647cd405",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:9091/coupons/18",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1619889820083,
+			"name": "cancelCoupon",
+			"description": "",
+			"collectionId": "94237fe4-2051-425c-ee41-71d7ff55be9a",
+			"responses": []
+		},
+		{
+			"id": "4159649d-6847-6dba-34f1-d1973856bbb7",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:9091/coupons?couponStatus=CREATED&pageIndex=0&pageSize=10",
+			"queryParams": [
+				{
+					"key": "couponStatus",
+					"value": "CREATED",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageIndex",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1619889684935,
+			"name": "getAllCouponsByCouponStatus",
+			"description": "",
+			"collectionId": "94237fe4-2051-425c-ee41-71d7ff55be9a",
+			"responses": []
+		},
+		{
+			"id": "67da459e-f182-73f2-4c3b-c340f7a43f78",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9091/coupons",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1619889740764,
+			"name": "createCoupon",
+			"description": "",
+			"collectionId": "94237fe4-2051-425c-ee41-71d7ff55be9a",
+			"responses": [],
+			"rawModeData": "{\n  \"eventIds\": [\n    16\n  ]\n}"
+		},
+		{
+			"id": "d1582c5d-ece0-6b49-3654-19c11983453c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:9091/coupons/2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1619889795213,
+			"name": "getPlayedCoupons",
+			"description": "",
+			"collectionId": "94237fe4-2051-425c-ee41-71d7ff55be9a",
+			"responses": []
+		},
+		{
+			"id": "f52a04c7-e379-5c42-8576-258a8c7f1028",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9091/coupons/play",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1619889763692,
+			"name": "playCoupons",
+			"description": "",
+			"collectionId": "94237fe4-2051-425c-ee41-71d7ff55be9a",
+			"responses": [],
+			"rawModeData": "{\n  \"userId\": 1,\n  \"couponIds\": [\n    11\n  ]\n}"
+		}
+	]
+}

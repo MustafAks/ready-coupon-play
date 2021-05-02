@@ -1,10 +1,11 @@
 package com.bilyoner.assignment.couponapi.entity;
 
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Builder
 @Setter
@@ -18,7 +19,15 @@ public class CouponSelectionEntity {
     @GeneratedValue
     private Long id;
 
-    /**
-     * TODO : Implement missing parts
-     */
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "coupon_id")
+    private CouponEntity coupon;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "event_id")
+    private EventEntity event;
+
+    @CreatedDate
+    @Column(columnDefinition = "TIMESTAMP")
+    private LocalDateTime createDate;
 }

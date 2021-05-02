@@ -28,6 +28,6 @@ public class EventEntity {
     @Column(nullable = false)
     private EventTypeEnum type;
 
-    @Column(columnDefinition = "TIMESTAMP", nullable = false)
+    @Column(nullable = false)
     private LocalDateTime eventDate;
 }

@@ -12,6 +12,7 @@
 	<modules>
 		<module>balance-api</module>
 		<module>coupon-api</module>
+		<module>balance-api-client</module>
 	</modules>
 
 	<properties>
